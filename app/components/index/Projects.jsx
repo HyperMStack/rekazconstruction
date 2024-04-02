@@ -1,6 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
-import Image from "next/image";
-import Link from "next/link";
+import { Box, Flex, Text, Link, Image } from "@chakra-ui/react";
 
 export function Projects({ projects }) {
   return (
@@ -8,14 +6,15 @@ export function Projects({ projects }) {
       <Text fontSize="5xl" fontWeight="bold" textAlign={"center"} mb={4}>
         Our Latest Projects
       </Text>
-      <Flex gap={4} flexWrap="wrap">
+      <Flex gap={4} flexWrap="wrap" align="center" justify="center">
         {projects.map((project) => (
           <Box
             key={project.id}
             mb={4}
+            mx={"auto"}
             overflow={"hidden"}
-            width="300px"
-            height="200px"
+            width={{ base: "90%", md: "30%" }} // Adjusts width based on screen size
+            height={{ base: "200px", md: "300px" }} // Adjusts height based on screen size
           >
             <Link href={`/${project?.slug}`}>
               <Box
@@ -28,9 +27,8 @@ export function Projects({ projects }) {
                 <Image
                   src={project.thumbImage}
                   alt={project.title}
-                  layout="fill"
-                  objectFit="cover"
                   transition="transform 0.3s ease-in-out"
+                  objectFit={"contain"}
                 />
               </Box>
               <Text textAlign="center" mt={2}>

@@ -86,7 +86,34 @@ export const heroData = {
 };
 
 export const projectsData = [
-  { id: 1, title: "Project 1", slug:"project-1", thumbImage: "/images/project1.jpg" },
-  { id: 2, title: "Project 2",slug:"project-2", thumbImage: "/images/project2.jpg" },
-  { id: 3, title: "Project 3",slug:"project-3", thumbImage: "/images/project3.jpg" },
+  {
+    id: 1,
+    title: "Project 1",
+    slug: "project-1",
+    thumbImage: "/images/project1.jpg",
+  },
+  {
+    id: 2,
+    title: "Project 2",
+    slug: "project-2",
+    thumbImage: "/images/project2.jpg",
+  },
+  {
+    id: 3,
+    title: "Project 3",
+    slug: "project-3",
+    thumbImage: "/images/project3.jpg",
+  },
+  {
+    id: 4,
+    title: "Project 3",
+    slug: "project-3",
+    thumbImage: "/images/project3.jpg",
+  },
+  {
+    id: 5,
+    title: "Project 3",
+    slug: "project-3",
+    thumbImage: "/images/project3.jpg",
+  },
 ];

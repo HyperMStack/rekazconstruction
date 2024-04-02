@@ -5,7 +5,6 @@ import {
   IconButton,
   Collapse,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
   Spacer,
 } from "@chakra-ui/react";
@@ -13,7 +12,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { DesktopNav } from "./navbar/DesktopNav";
 import { MobileNav } from "./navbar/MobileNav";
 
-export function Navbar({ navItems }) {
+export const Navbar = ({ navItems }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -22,18 +21,14 @@ export function Navbar({ navItems }) {
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
+        py={2}
+        px={4}
         borderBottom={1}
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
       >
-        <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
-        >
+        <Flex flex={[1, "auto"]} ml={-2} display={["flex", "none"]}>
           <IconButton
             onClick={onToggle}
             icon={isOpen ? <FaTimes w={3} h={3} /> : <FaBars w={5} h={5} />}
@@ -41,19 +36,16 @@ export function Navbar({ navItems }) {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+        <Flex flex={{ base: 1 }} justify={["center", "start"]}>
           <Text
-            textAlign={useBreakpointValue(
-              { base: "center", md: "left" },
-              { ssr: true }
-            )}
+            textAlign={"center"}
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
             Logo
           </Text>
           <Spacer />
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
+          <Flex display={["none", "flex"]} ml={10}>
             <DesktopNav navItems={navItems} />
           </Flex>
           <Spacer />
@@ -65,4 +57,4 @@ export function Navbar({ navItems }) {
       </Collapse>
     </Box>
   );
-}
+};

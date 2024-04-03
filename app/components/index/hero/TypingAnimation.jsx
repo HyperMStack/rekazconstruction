@@ -1,43 +1,69 @@
 import { Text } from "@chakra-ui/react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 export const TypingAnimation = ({ words }) => {
   const [index, setIndex] = useState(0);
   const [word, setWord] = useState(words[index]);
+  const [letters, setLetters] = useState(word.split("")); // State to hold the letters of the current word
   const wordRef = useRef(word); // Use a ref to store the current word
   const controls = useAnimation(); // Framer Motion animation controls
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % words.length);
-      const newWord = words[index];
+  // Function to update the word and trigger the animation
+  const updateWordAndAnimate = useCallback(() => {
+    // Update the index and fetch the new word
+    setIndex((prevIndex) => {
+      const newIndex = (prevIndex + 1) % words.length;
+      const newWord = words[newIndex];
+      wordRef.current = newWord;
       setWord(newWord);
-      wordRef.current = newWord; // Update the ref with the new word
-      // Trigger the animation for the new word
-      controls.start({
-        opacity: [0, 1],
-        scale: [0, 1],
-        transition: {
-          duration: 0.5,
-          delay: (i) => i * 0.05, // Delay increases with each letter
-          staggerChildren: 0.05, // Optional: Adds a delay between each child animation
-        },
+      return newIndex;
+    });
+
+    // First, animate the current word to opacity and scale 0
+    controls
+      .start({
+        opacity: [1, 0],
+        scale: [1, 0],
+        transition: { duration: 0.5 },
+      })
+      .then(() => {
+        // Update the letters state to trigger a re-render of the letters
+        setLetters(wordRef.current.split(""));
+
+        // Delay the start of the animation until after the letters have been rendered
+        setTimeout(() => {
+          controls.start({
+            opacity: [0, 1],
+            scale: [0, 1],
+          });
+        }, 100); // Adjust the delay as needed
       });
+  }, [words, controls]); // Dependencies of the function
+
+  useEffect(() => {
+    // Trigger the animation immediately when the component mounts
+    updateWordAndAnimate();
+
+    const timer = setInterval(() => {
+      updateWordAndAnimate(); // Use the function to update the word and animate
     }, 3000); // Change word every 3 seconds
-    return () => clearTimeout(timer);
-  }, [index, words, controls]);
+
+    return () => clearInterval(timer);
+  }, [updateWordAndAnimate]);
 
   return (
     <div
       style={{ display: "flex", flexDirection: "row", alignItems: "center" }}
     >
-      {wordRef.current.split("").map((letter, i) => (
+      {letters.map((letter, i) => (
         <motion.div
           key={i}
           custom={i}
+          initial={{ opacity: 0 }} // Initial opacity is 0
           animate={controls}
           style={{ display: "inline-block" }}
+          transition={{ duration: 1, delay: i * 0.07 }} // Delay each letter by 0.1 seconds
         >
           <Text as={"b"} fontSize={"8xl"} color={"white"}>
             {letter}

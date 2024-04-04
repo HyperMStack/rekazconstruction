@@ -65,7 +65,7 @@ export const TypingAnimation = ({ words }) => {
           style={{ display: "inline-block" }}
           transition={{ duration: 1, delay: i * 0.07 }} // Delay each letter by 0.1 seconds
         >
-          <Text as={"b"} fontSize={"8xl"} color={"white"}>
+          <Text as={"b"} fontSize={["7xl", "8xl"]} color={"white"}>
             {letter}
           </Text>
         </motion.div>

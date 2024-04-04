@@ -16,8 +16,8 @@ export function Hero({ data }) {
         left="0"
         right="0"
         bottom="0"
-        backgroundColor={"black"}
-        opacity="0.1"
+        backgroundImage={`linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))`}
+        // opacity="0.3"
       />
       <Flex
         bottom={"30%"}
@@ -28,7 +28,7 @@ export function Hero({ data }) {
         justifyContent="center" // Center the text and button vertically
         gap={4} // Add some space between the text and button
       >
-        <Text fontSize={"8xl"} as={"b"} color="white">
+        <Text fontSize={["7xl", "8xl"]} as={"b"} color="white">
           {data.text}
         </Text>
         <TypingAnimation words={data.typedText} />

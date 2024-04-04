@@ -7,7 +7,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { LayoutWrapper } from "./components/LayoutWrapper";
-import { navLinks } from "./data/data";
+import { navLinks, websiteData } from "./data/data";
 
 export function Layout({ children }) {
   return (
@@ -30,7 +30,7 @@ export function Layout({ children }) {
 export default function App() {
   return (
     <ChakraProvider>
-      <LayoutWrapper navItems={navLinks}>
+      <LayoutWrapper logo={websiteData.logo} navItems={navLinks}>
         <Outlet />
       </LayoutWrapper>
     </ChakraProvider>

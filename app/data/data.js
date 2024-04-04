@@ -2,7 +2,7 @@ export const websiteData = {
   websiteName: "Rekaz Construction",
   websiteDescription:
     "Rekaz Construction is a construction company based in Muscat, Oman.",
-  // websiteLogo: "/images/logo.png",
+  logo: { light: "/logo_light.png", dark: "/logo_dark.png" },
 };
 export const navColors = {
   textColor: "black",

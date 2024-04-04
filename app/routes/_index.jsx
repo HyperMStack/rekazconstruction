@@ -2,11 +2,12 @@ import { Box } from "@chakra-ui/react";
 import { heroData, projectsData } from "../data/data";
 import { Hero } from "../components/index/Hero";
 import { Projects } from "../components/index/Projects";
+import { websiteData } from "../data/data";
 
 export const meta = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: websiteData.websiteName },
+    { name: "description", content: websiteData.websiteDescription },
   ];
 };
 

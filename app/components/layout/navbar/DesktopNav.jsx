@@ -4,14 +4,13 @@ import {
   PopoverContent,
   PopoverTrigger,
   Stack,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { DesktopSubNav } from "./DesktopSubNav";
 
 export function DesktopNav({ navItems }) {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
+  const linkColor = "gray.100";
+  const linkHoverColor = "gray.300";
+  const popoverContentBgColor = "white";
 
   return (
     <Stack direction={"row"} spacing={4}>
@@ -23,7 +22,7 @@ export function DesktopNav({ navItems }) {
                 as="a"
                 p={2}
                 href={navItem.href ?? "#"}
-                fontSize={"sm"}
+                fontSize={"md"}
                 fontWeight={500}
                 color={linkColor}
                 _hover={{

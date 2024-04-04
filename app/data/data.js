@@ -117,3 +117,118 @@ export const projectsData = [
     thumbImage: "/images/project3.jpg",
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Project1",
+    images: {
+      mainImage: "/images/project1.jpg",
+      images: [
+        "/images/project2.jpg",
+        "/images/project3.jpg",
+        "/images/project2.jpg",
+        "/images/project3.jpg",
+      ],
+    },
+  },
+  {
+    id: 2,
+    title: "Project2",
+    mainImage: "/images/project2.jpg",
+    images: [
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+    ],
+  },
+  {
+    id: 3,
+    title: "Project3",
+    mainImage: "/images/project3.jpg",
+    images: [
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+    ],
+  },
+  {
+    id: 4,
+    title: "Project4",
+    mainImage: "/images/project1.jpg",
+    images: [
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+    ],
+  },
+  {
+    id: 5,
+    title: "Project5",
+    mainImage: "/images/project2.jpg",
+    images: [
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+    ],
+  },
+  {
+    id: 6,
+    title: "Project1",
+    mainImage: "/images/project3.jpg",
+    images: [
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+    ],
+  },
+  {
+    id: 7,
+    title: "Project7",
+    mainImage: "/images/project1.jpg",
+    images: [
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+    ],
+  },
+  {
+    id: 8,
+    title: "Project8",
+    mainImage: "/images/project2.jpg",
+    images: [
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+    ],
+  },
+  {
+    id: 9,
+    title: "Project9",
+    mainImage: "/images/project3.jpg",
+    images: [
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+    ],
+  },
+  {
+    id: 10,
+    title: "Project10",
+    mainImage: "/images/project1.jpg",
+    images: [
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+      "/images/project2.jpg",
+      "/images/project3.jpg",
+    ],
+  },
+];

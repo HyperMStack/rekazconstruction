@@ -1,5 +1,5 @@
 import { Navbar } from "./layout/Navbar";
-import { Footer } from "./layout/Footer";
+// import { Footer } from "./layout/Footer";
 import { Box } from "@chakra-ui/react";
 
 export function LayoutWrapper({ children, navItems, logo }) {
@@ -7,7 +7,7 @@ export function LayoutWrapper({ children, navItems, logo }) {
     <Box>
       <Navbar navItems={navItems} logo={logo} />
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </Box>
   );
 }

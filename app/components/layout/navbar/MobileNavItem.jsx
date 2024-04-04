@@ -25,14 +25,12 @@ export function MobileNavItem({ label, children, href }) {
           textDecoration: "none",
         }}
       >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
-        >
+        <Text fontWeight={600} color={"white"}>
           {label}
         </Text>
         {children && (
           <Icon
+            color={"white"}
             as={FaAngleDown}
             transition={"all .25s ease-in-out"}
             transform={isOpen ? "rotate(180deg)" : ""}
@@ -50,6 +48,7 @@ export function MobileNavItem({ label, children, href }) {
           borderStyle={"solid"}
           borderColor={useColorModeValue("gray.200", "gray.700")}
           align={"start"}
+          color={"white"}
         >
           {children &&
             children.map((child) => (

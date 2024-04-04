@@ -7,8 +7,9 @@ export function Hero({ data }) {
       <Image
         src={data.image}
         alt={data.buttonText}
-        height={["80vh", "auto"]}
-        objectFit={["cover", "contain"]}
+        height={"100vh"}
+        width={"100vw"}
+        objectFit={"cover"}
       />
       <Box
         position="absolute"
@@ -16,7 +17,7 @@ export function Hero({ data }) {
         left="0"
         right="0"
         bottom="0"
-        backgroundImage={`linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))`}
+        backgroundImage={`linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0))`}
         // opacity="0.3"
       />
       <Flex

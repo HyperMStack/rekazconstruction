@@ -21,7 +21,7 @@ export function Hero({ data }) {
         // opacity="0.3"
       />
       <Flex
-        bottom={"30%"}
+        bottom={"15%"}
         left={"10%"}
         position="absolute"
         direction="column" // Stack the text and button vertically

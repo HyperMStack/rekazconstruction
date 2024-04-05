@@ -1,3 +1,5 @@
+import { Box } from "@chakra-ui/react";
+
 export function Footer() {
-  return <div>Footer</div>;
+  return <Box minH={"200px"}></Box>;
 }

@@ -1,28 +1,17 @@
 import { Box, Text } from "@chakra-ui/react";
 
-export function TitlesSelector({ titles, setSelectedIndex }) {
+export function TitlesSelector({ titles, selectedIndex, setSelectedIndex }) {
   return (
     <Box
       display="flex"
       gap={4}
       p={4}
       overflowX={"auto"}
-      overflowY={"hidden"} // Hide the vertical scrollbar
+      overflowY={"hidden"}
       boxSizing="border-box"
       sx={{
         "&::-webkit-scrollbar": {
-          height: "4px",
-        },
-        "&::-webkit-scrollbar-track": {
-          background: "transparrent",
-        },
-        "&::-webkit-scrollbar-thumb": {
-          background: "#888",
-          borderRadius: "5px",
-          transition: "all 0.2s",
-        },
-        "&::-webkit-scrollbar-thumb:hover": {
-          background: "#555",
+          display: "none",
         },
       }}
     >
@@ -31,12 +20,12 @@ export function TitlesSelector({ titles, setSelectedIndex }) {
           key={item.id}
           onClick={() => setSelectedIndex(item.id)}
           borderBottom="2px solid"
-          borderColor="gray.500"
+          borderColor={selectedIndex === item.id ? "gray.700" : "gray.400"}
           mx={"-2"}
           mb={"-4"}
           px={16}
           pb={3}
-          color={"gray.500"}
+          color={selectedIndex === item.id ? "gray.700" : "gray.400"}
           _hover={{
             color: "gray.700",
             borderColor: "gray.700",

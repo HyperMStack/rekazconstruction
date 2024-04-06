@@ -1,9 +1,9 @@
 import { Box } from "@chakra-ui/react";
 import { heroData } from "../data/data";
 import { Hero } from "../components/index/Hero";
-// import { Projects } from "../components/index/Projects";
-import { websiteData } from "../data/data";
-// import ProjectsSelector from "../components/index/ProjectsSelector";
+import { websiteData, projects } from "../data/data";
+import ProjectsSelector from "../components/index/ProjectsSelector";
+import "../styles/global.css";
 
 export const meta = () => {
   return [
@@ -16,8 +16,7 @@ export default function Index() {
   return (
     <Box>
       <Hero data={heroData} />
-      {/* <Projects projects={projectsData} /> */}
-      {/* <ProjectsSelector projects={projects} /> */}
+      <ProjectsSelector projects={projects} />
     </Box>
   );
 }

@@ -4,6 +4,7 @@ import { Hero } from "../components/index/Hero";
 import { websiteData, projects } from "../data/data";
 import ProjectsSelector from "../components/index/ProjectsSelector";
 import "../styles/global.css";
+import { Contact } from "../components/index/Contact";
 
 export const meta = () => {
   return [
@@ -17,6 +18,7 @@ export default function Index() {
     <Box>
       <Hero data={heroData} />
       <ProjectsSelector projects={projects} />
+      <Contact />
     </Box>
   );
 }

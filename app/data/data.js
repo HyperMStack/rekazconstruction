@@ -231,3 +231,21 @@ export const projects = [
     ],
   },
 ];
+
+export const sectors = [
+  {
+    title: "Sector Title",
+    icon: "/images/bridge.svg",
+    text: "We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.",
+  },
+  {
+    title: "Sector Title",
+    icon: "/images/buildings.svg",
+    text: "We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.",
+  },
+  {
+    title: "Sector Title",
+    icon: "/images/factory.svg",
+    text: "We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.",
+  },
+];

@@ -1,5 +1,4 @@
 import Masonry from "react-masonry-css";
-import { Box } from "@chakra-ui/react";
 
 export function ProjectImageGallery({ selectedProject }) {
   const imagesArray = selectedProject?.images;
@@ -10,7 +9,7 @@ export function ProjectImageGallery({ selectedProject }) {
     500: 1,
   };
   return (
-    <Box mt={8}>
+    <div className="mt-8">
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className="my-masonry-grid"
@@ -24,6 +23,6 @@ export function ProjectImageGallery({ selectedProject }) {
           />
         ))}
       </Masonry>
-    </Box>
+    </div>
   );
 }

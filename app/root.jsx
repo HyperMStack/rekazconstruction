@@ -1,4 +1,3 @@
-import { ChakraProvider } from "@chakra-ui/react";
 import {
   Links,
   Meta,
@@ -6,6 +5,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import "./tailwind.css";
 import { LayoutWrapper } from "./components/LayoutWrapper";
 import { navLinks, websiteData } from "./data/data";
 
@@ -29,10 +29,8 @@ export function Layout({ children }) {
 
 export default function App() {
   return (
-    <ChakraProvider>
-      <LayoutWrapper logo={websiteData.logo} navItems={navLinks}>
-        <Outlet />
-      </LayoutWrapper>
-    </ChakraProvider>
+    <LayoutWrapper logo={websiteData.logo} navItems={navLinks}>
+      <Outlet />
+    </LayoutWrapper>
   );
 }

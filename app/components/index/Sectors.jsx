@@ -1,27 +1,20 @@
-import { Box, Text, Flex, Image } from "@chakra-ui/react";
-
 export function Sectors({ sectorsData }) {
   return (
-    <Box py={8} px={4} borderRadius="lg">
-      <Text textAlign={"center"} fontSize="5xl" fontWeight="bold" mb={4}>
-        Our Sectors
-      </Text>
-      <Flex flexWrap="wrap" justifyContent="center">
+    <div className="py-8 px-4 rounded-lg">
+      <h2 className="text-center text-5xl font-bold mb-4">Our Sectors</h2>
+      <div className="flex flex-wrap justify-center">
         {sectorsData.map((sector, i) => (
-          <Box key={i} m={4} maxW="400px" textAlign="start">
-            <Image
+          <div className="m-4 max-w-96 text-start" key={i}>
+            <img
               src={sector.icon}
               alt={sector.title}
-              boxSize="140px"
-              mb={4}
+              className="mb-4 aspect-square w-36"
             />
-            <Text fontSize="2xl" fontWeight="bold" mb={2}>
-              {sector.title}
-            </Text>
-            <Text>{sector.text}</Text>
-          </Box>
+            <p className="text-2xl font-bold mb-2">{sector.title}</p>
+            <p>{sector.text}</p>
+          </div>
         ))}
-      </Flex>
-    </Box>
+      </div>
+    </div>
   );
 }

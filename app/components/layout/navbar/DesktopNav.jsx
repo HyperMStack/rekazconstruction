@@ -1,58 +1,30 @@
-import {
-  Box,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-  Stack,
-} from "@chakra-ui/react";
 import { DesktopSubNav } from "./DesktopSubNav";
 
 export function DesktopNav({ navItems }) {
-  const linkColor = "gray.100";
-  const linkHoverColor = "gray.300";
-  const popoverContentBgColor = "white";
-
   return (
-    <Stack direction={"row"} spacing={4}>
+    <div className="flex gap-4">
       {navItems.map((navItem) => (
-        <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"}>
-            <PopoverTrigger>
-              <Box
-                as="a"
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"md"}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-              </Box>
-            </PopoverTrigger>
+        <div key={navItem.label} className="group py-4 mx-2">
+          <div className="relative">
+            <a
+              className={`p-2 text-base font-normal text-gray-100 hover:text-gray-300`} //! add decoration: none
+              href={navItem.href ?? "#"}
+            >
+              {navItem.label}
+            </a>
 
             {navItem.children && (
-              <PopoverContent
-                border={0}
-                boxShadow={"xl"}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={"xl"}
-                minW={"sm"}
-              >
-                <Stack>
+              <div className="top-10 left-0  min-w-80 hidden absolute border-0 shadow-xl bg-white p-4 rounded-xl group-hover:block">
+                <div className="flex flex-col">
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
-                </Stack>
-              </PopoverContent>
+                </div>
+              </div>
             )}
-          </Popover>
-        </Box>
+          </div>
+        </div>
       ))}
-    </Stack>
+    </div>
   );
 }

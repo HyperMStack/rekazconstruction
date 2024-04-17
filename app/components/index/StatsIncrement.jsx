@@ -1,4 +1,3 @@
-import { Box, Text, Spacer } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 
 export function StatsIncrement() {
@@ -48,38 +47,24 @@ export function StatsIncrement() {
   }, []);
 
   return (
-    <Box
-      height={"80vh"}
-      bgImage={"url(/images/bg.jpg)"}
-      backgroundPosition="bottom"
-      backgroundRepeat="no-repeat"
-      display="flex"
-      flexDirection={{ base: "column", md: "row" }}
-      justifyContent="space-between"
-      alignItems="center"
-      padding={{ base: "20px", md: "40px" }}
-      maxW={"1350px"}
-      margin="0 auto"
+    <div
+      className={`h-[80vh] bg-[url(/images/bg.jpg)] bg-bottom bg-no-repeat flex flex-col md:flex-row justify-between items-center p-5 md:p-10 max-w-[1350px] my-0 mx-auto`}
     >
-      <Box
-        flexBasis={{ base: "100%", md: "40%" }}
-        textAlign={{ base: "center", md: "left" }}
-        maxW={"400px"}
-      >
-        <Text fontSize={{ base: "2xl", md: "5xl" }} fontWeight="bold" mb={4}>
+      <div className="basis-full md:basis-2/5 text-center md:text-start max-w-96">
+        <h2 className="text-2xl md:text-5xl font-bold mb-4">
           Building for the best
-        </Text>
-        <Text fontSize={{ base: "md", md: "lg" }}>
+        </h2>
+        <p className="text-base md:text-lg">
           To explore and go after new ways to build, we’ve gathered the people,
           innovations, and partnerships that can anticipate and overcome new
           challenges.
-        </Text>
-      </Box>
-      <Spacer display={{ base: "none", md: "block" }} />
-      <Box flexBasis={{ base: "100%", md: "20%" }}>
+        </p>
+      </div>
+      <div className="hidden md:block" />
+      <div className="basis-full md:basis-1/5">
         {items.map((item, i) => (
-          <Box mb={4} key={i}>
-            <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">
+          <div className="mb-4" key={i}>
+            <h3 className="text-2xl md:text-3xl font-bold">
               <span
                 ref={(el) => (sectionsRef.current[i] = el)}
                 data-goal={item.goal}
@@ -87,12 +72,11 @@ export function StatsIncrement() {
                 0
               </span>
               {item.symbol}
-            </Text>
-            {item.addPercent ? "%" : ""}
-            <Text fontSize={{ base: "sm", md: "md" }}>{item.text}</Text>
-          </Box>
+            </h3>
+            <p className="text-sm md:text-base">{item.text}</p>
+          </div>
         ))}
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 }

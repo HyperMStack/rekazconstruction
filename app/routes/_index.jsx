@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react";
 import { heroData } from "../data/data";
 import { Hero } from "../components/index/Hero";
 import { websiteData, projects, sectors } from "../data/data";
@@ -17,12 +16,12 @@ export const meta = () => {
 
 export default function Index() {
   return (
-    <Box>
+    <div>
       <Hero data={heroData} />
       <ProjectsSelector projects={projects} />
       <Sectors sectorsData={sectors} />
       <StatsIncrement />
       <Contact />
-    </Box>
+    </div>
   );
 }

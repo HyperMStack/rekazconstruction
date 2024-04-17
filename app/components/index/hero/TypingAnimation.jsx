@@ -1,4 +1,3 @@
-import { Text } from "@chakra-ui/react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, useAnimation } from "framer-motion";
 
@@ -53,21 +52,17 @@ export const TypingAnimation = ({ words }) => {
   }, [updateWordAndAnimate]);
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "row", alignItems: "center" }}
-    >
+    <div className="flex flex-row items-center">
       {letters.map((letter, i) => (
         <motion.div
           key={i}
           custom={i}
           initial={{ opacity: 0 }} // Initial opacity is 0
           animate={controls}
-          style={{ display: "inline-block" }}
+          className="inline-block"
           transition={{ duration: 1, delay: i * 0.07 }} // Delay each letter by 0.1 seconds
         >
-          <Text as={"b"} fontSize={["7xl", "8xl"]} color={"white"}>
-            {letter}
-          </Text>
+          <b className="text-7xl md:text-8xl text-white">{letter}</b>
         </motion.div>
       ))}
     </div>

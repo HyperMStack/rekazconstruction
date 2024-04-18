@@ -37,7 +37,7 @@ export const navLinks = [
 
 export const heroData = {
   image: "/images/construction.jpg",
-  text: "Build, Invest",
+  text: "Build. Invest.",
   typedText: ["Suceed.", "Innovate."],
   buttonText: "Contact Us",
 };

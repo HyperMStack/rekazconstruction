@@ -10,8 +10,8 @@ export default function ProjectsSelector({ projects }) {
   const [selectedIndex, setSelectedIndex] = useState(projects[0].id);
   return (
     <div className="m-8 max-w-[1350px] mx-auto">
-      <div className="text-center my-4">
-        <b className="text-5xl text-gray-800">Our Projects</b>
+      <div className="text-center mb-12 mt-16">
+        <b className="text-5xl text-gray-800">Our Latest Projects</b>
       </div>
       <TitlesSelector
         titles={projectsTitles}

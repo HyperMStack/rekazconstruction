@@ -32,9 +32,14 @@ export function Contact() {
                 <div className="py-5 md:py-8 lg:py-10">
                   <div className="flex flex-col pl-0 gap-3 items-start">
                     <ContactButton
-                      text={"+91-988888888"}
+                      text={"+968-9836 6664"}
                       icon={<MdPhone color="black" size="20px" />}
-                      link={"tel:+91-988888888"}
+                      link={"tel:+968-98366664"}
+                    />
+                    <ContactButton
+                      text={"+968-9396 6662"}
+                      icon={<MdPhone color="black" size="20px" />}
+                      link={"tel:+968-93966662"}
                     />
                     <ContactButton
                       text={"info@mail.com"}
@@ -42,7 +47,7 @@ export function Contact() {
                       link={"mailto:info@mail.com"}
                     />
                     <ContactButton
-                      text={"Karnavati, India"}
+                      text={"Sultanate of Oman, Muscat-Salalah"}
                       icon={<MdLocationOn color="black" size="20px" />}
                       link={"#"}
                     />

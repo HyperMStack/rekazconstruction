@@ -1,7 +1,6 @@
 import { BiChevronRight } from "react-icons/bi";
 
 export function Card({ projectData }) {
-  console.log("data", projectData);
   return (
     <div className="relative hover:cursor-pointer">
       <img

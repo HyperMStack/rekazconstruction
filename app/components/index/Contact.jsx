@@ -33,7 +33,7 @@ export function Contact() {
                     ))}
                   </div>
                 </div>
-                <div className="flex mt-5 md:mt-10 gap-5 px-5 items-start">
+                <div className="flex mt-5 md:mt-10 md:pe-5 justify-around mx-auto md:justify-start md:gap-5">
                   {socialLinks.map((social) => (
                     <ContactIconButton
                       label={social.text}

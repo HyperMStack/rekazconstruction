@@ -1,4 +1,3 @@
-import { FaBars, FaTimes } from "react-icons/fa";
 import { DesktopNav } from "./navbar/DesktopNav";
 import { MobileNav } from "./navbar/MobileNav";
 import { useState } from "react";
@@ -16,9 +15,16 @@ export const Navbar = ({ navItems, logo }) => {
           <button
             onClick={toggleCollapse}
             className="text-white hover:bg-transparent active:bg-transparent"
-            // onBlur={toggleCollapse}
           >
-            {isOpen ? <FaTimes w={3} h={3} /> : <FaBars w={5} h={5} />}
+            {isOpen ? (
+              <img
+                src="/images/svg/cross.svg"
+                alt="exit menu"
+                className="text-white"
+              />
+            ) : (
+              <img src="/images/svg/menu.svg" alt="menu" />
+            )}
           </button>
         </div>
         <div className="flex flex-1 justify-center md:justify-start m-auto absolute md:static top-0 left-1/2 -translate-x-1/2 md:translate-x-0">

@@ -1,16 +1,8 @@
 import { useEffect, useRef } from "react";
+import { statsData } from "../../data/data";
 
 export function StatsIncrement() {
   const sectionsRef = useRef([]);
-  const items = [
-    { goal: 100, text: "Employees Owned", symbol: "%" },
-    {
-      goal: 30,
-      text: "Over 30 Project in various industries",
-      symbol: "",
-    },
-    { goal: 10, text: "With Nearly 10 Years in Buisness", symbol: "" },
-  ];
 
   function startCount(sect, goal) {
     let count = 0;
@@ -62,8 +54,8 @@ export function StatsIncrement() {
       </div>
       <div className="hidden md:block" />
       <div className="basis-full md:basis-1/5">
-        {items.map((item, i) => (
-          <div className="mb-4" key={i}>
+        {statsData.map((item, i) => (
+          <div className="my-10" key={i}>
             <h3 className="text-2xl md:text-3xl font-bold">
               <span
                 ref={(el) => (sectionsRef.current[i] = el)}

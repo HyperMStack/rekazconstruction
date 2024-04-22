@@ -13,6 +13,49 @@ export const colors = {
   backgroundColor: "white",
 };
 
+export const contactInfo = [
+  {
+    id: 1,
+    text: "+968-9836 6664",
+    icon: "/images/svg/phone.svg",
+    link: "tel:+968-98366664",
+  },
+  {
+    id: 2,
+    text: "+968-9396 6662",
+    icon: "/images/svg/phone.svg",
+    link: "tel:+968-93966662",
+  },
+  {
+    id: 3,
+    text: "info@mail.com",
+    icon: "/images/svg/email.svg",
+    link: "mailto:info@mail.com",
+  },
+  {
+    id: 4,
+    text: "Sultanate of Oman, Muscat-Salalah",
+    icon: "/images/svg/location.svg",
+    link: "#",
+  },
+];
+
+export const socialLinks = [
+  { id: 1, text: "facebook", icon: "/images/svg/facebook.svg", link: "#" },
+  { id: 2, text: "github", icon: "/images/svg/github.svg", link: "#" },
+  { id: 3, text: "discord", icon: "/images/svg/discord.svg", link: "#" },
+];
+
+export const statsData = [
+  { goal: 100, text: "Employees Owned", symbol: "%" },
+  {
+    goal: 30,
+    text: "Over 30 Project in various industries",
+    symbol: "",
+  },
+  { goal: 10, text: "With Nearly 10 Years in Buisness", symbol: "" },
+];
+
 export const navLinks = [
   { id: 1, label: "Home", href: "/" },
   {
@@ -33,6 +76,13 @@ export const navLinks = [
   },
   // { id: 3, label: "Services", href: "/services" },
   { id: 4, label: "Contact", href: "/contact" },
+];
+
+export const footerLinks = [
+  { id: 1, label: "Latest Projects", href: "#" },
+  { id: 1, label: "Privacy Policy", href: "#" },
+  { id: 1, label: "Terms of Service", href: "#" },
+  { id: 1, label: "Contact", href: "#" },
 ];
 
 export const heroData = {
@@ -238,17 +288,17 @@ export const projects = [
 export const sectors = [
   {
     title: "Sector Title",
-    icon: "/images/bridge.svg",
+    icon: "/images/svg/bridge.svg",
     text: "We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.",
   },
   {
     title: "Sector Title",
-    icon: "/images/buildings.svg",
+    icon: "/images/svg/buildings.svg",
     text: "We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.",
   },
   {
     title: "Sector Title",
-    icon: "/images/factory.svg",
+    icon: "/images/svg/factory.svg",
     text: "We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.",
   },
 ];

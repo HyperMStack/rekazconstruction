@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaAngleDown } from "react-icons/fa";
 
 export function MobileNavItem({ label, children, href }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +15,9 @@ export function MobileNavItem({ label, children, href }) {
       >
         <p className="font-semibold text-white">{label}</p>
         {children && (
-          <FaAngleDown
+          <img
+            src="/images/svg/arrow-down.svg"
+            alt="open sub-title"
             className={`text-white w-6 h-6 ${
               isOpen ? "rotate-180" : ""
             } transition-all duration-200 ease-in-out`}

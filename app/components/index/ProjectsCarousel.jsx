@@ -3,10 +3,9 @@ import { Card } from "./projectsCarousel/Card";
 
 export function ProjectsCarousel({ projects }) {
   const [emblaRef] = useEmblaCarousel();
-  console.log("projects", projects);
   return (
     <div className="my-16 container mx-auto">
-      <h2 className="text-center text-5xl my-8 font-semibold">
+      <h2 className="text-center text-5xl my-16 font-semibold">
         Our Latest Projects
       </h2>
       <div className="embla overflow-hidden" ref={emblaRef}>

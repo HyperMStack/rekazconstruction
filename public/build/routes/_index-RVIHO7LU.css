@@ -1,0 +1,20 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+
+/* css-side-effects-plugin-ns:app\styles\global.css */
+* {
+  font-family: "Montserrat", sans-serif;
+}
+.my-masonry-grid {
+  display: flex;
+  margin-left: -10px;
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 10px;
+  background-clip: padding-box;
+}
+.my-masonry-grid_column > img {
+  background: grey;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=/build/routes/_index-RVIHO7LU.css.map */

@@ -15,7 +15,7 @@ export function DesktopSubNav({ label, href, subLabel }) {
           <img
             src="/images/svg/arrow-right.svg"
             alt="go to link"
-            className="text-pink-400 w-5 h-5"
+            className=" w-5 h-5"
           />
         </div>
       </div>

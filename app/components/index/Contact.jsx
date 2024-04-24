@@ -3,9 +3,9 @@ import { ContactIconButton } from "./contact/ContactIconButton";
 import { ContactField } from "./contact/ContactField";
 import { contactInfo, socialLinks } from "../../data/data";
 
-export function Contact() {
+export function Contact({ className }) {
   return (
-    <div className="relative">
+    <div className={`relative ${className}`}>
       <img
         src="/images/contact.jpg"
         alt="rekaz-contact"

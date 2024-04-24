@@ -81,7 +81,7 @@ export function Contact({ className }) {
                       />
                     </div>
                     <div>
-                      <button className="bg-gray-600 text-white px-5 py-2 rounded-none">
+                      <button className="bg-gray-600 text-white px-5 py-2 w-full md:w-auto rounded-none">
                         Send Message
                       </button>
                     </div>
